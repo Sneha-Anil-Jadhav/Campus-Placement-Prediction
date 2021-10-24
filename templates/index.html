@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+<html>
+<body>
+    <h3>Campus Placement Prediction</h3>
+
+
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    
+    
+       <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+       </select>
+    <br>
+    <br>
+    
+     <label for="ssc_p">SSC Percentage </label>
+    <input type="float" id="ssc_p" name="ssc_p">btw:[0% - 100%]
+    <br>
+    <br>
+    
+     <label for="hsc_p">HSC Percentage</label>
+    <input type="float" id="hsc_p" name="hsc_p">btw:[0% - 100%]
+    <br>
+    <br>
+    
+    <label for="degree_p">Degree Percentage </label>
+    <input type="float" id="degree_p" name="degree_p">btw:[0% - 100%]
+    <br>
+      <br>
+    
+    	
+
+     <label for="workex">Do You Have Any Work Experience?</label>
+    <select id="workex" name="workex">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+       </select>
+    <br>
+      <br>
+    
+        <label for="etest_p">Etest Percentage </label>
+    <input type="float" id="etest_p" name="etest_p">btw:[0% - 100%]
+    <br>
+      <br>
+    
+     
+     <label for="specialisation">Did Any Specialisation?</label>
+    <select id="specialisation" name="specialisation">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+    
+        <label for="mba_p">MBA Percentage</label>
+    <input type="float" id="mba_p" name="mba_p">btw:[0% - 100%]
+    <br> 
+      <br>
+    
+    
+    
+    
+    <label for="hsc_Arts">Are You Passed Hsc Arts?</label>
+    <select id="hsc_Arts" name="hsc_Arts">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+    
+    
+     <label for="hsc_Commerce">Are You Passed Hsc Commerce?</label>
+    <select id="hsc_Commerce" name="hsc_Commerce">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+     
+      <label for="hsc_Science">Are You Passed Hsc Science?</label>
+    <select id="hsc_Science" name="hsc_Science">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+     <label for="degree_Comm&Mgmt">Do You Have Communication Management Dregree?</label>
+    <select id="degree_Comm&Mgmt" name="degree_Comm&Mgmt">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+    
+     <label for="degree_Others">Any Other Degree?</label>
+    <select id="degree_Others" name="degree_Others">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+    
+    
+      <label for="degree_Sci&Tech">Do You Have Science & Technology Dregree?</label>
+    <select id="degree_Sci&Tech" name="degree_Sci&Tech">
+      <option value="0">Yes</option>
+      <option value="1">No</option>
+       </select>
+    <br>
+      <br>
+      
+      
+    
+    
+    
+    
+    
+        
+        
+   
+   <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   
+ 
+   
+ </div>
+
+
+</body>
+</html>
